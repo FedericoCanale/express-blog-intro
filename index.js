@@ -4,6 +4,8 @@ const app = express();
 const PORT = 3000;
 
 
+app.use(express.static("public"));
+
 const posts = [
     {
         id: 1,
@@ -53,3 +55,8 @@ app.get("/bacheca", (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server in ascolto su http://localhost:${PORT}`);
 });
+
+/* To test on postman here are all my links
+ - http://localhost:3000/ (my blog server)
+ - http://localhost:3000/bacheca (complete blog, all array)
+ - http://localhost:3000/img/ciambellone.jpeg (to test one image, just change the name to check all other images) */
